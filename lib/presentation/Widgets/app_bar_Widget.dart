@@ -5,7 +5,8 @@ import 'package:netflix_cone/core/constants.dart';
 
 class AppBarWideget extends StatelessWidget {
   final title;
-  const AppBarWideget({super.key, this.title});
+  final PreferredSizeWidget? bottom;
+  const AppBarWideget({super.key, this.title, this.bottom});
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +23,15 @@ class AppBarWideget extends StatelessWidget {
           size: 30,
           color: customgreycolors,
         ),
-       kwidth,
+        kwidth,
         Icon(
           Icons.emoji_emotions,
           size: 30,
           color: customgreycolors,
         ),
-      kwidth
+        kwidth
       ],
+      bottom: bottom,
     );
   }
 }
