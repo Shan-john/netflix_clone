@@ -10,7 +10,7 @@ import 'package:netflix_cone/presentation/home/widget/home_screen_dynamic_app_ba
 
 import 'package:netflix_cone/presentation/home/widget/number_card_widget.dart';
 
-ValueNotifier<bool> scrollnotifier = ValueNotifier(false);
+ValueNotifier<bool> scrollnotifier = ValueNotifier(true);
 
 class ScreenHomePage extends StatelessWidget {
   const ScreenHomePage({super.key});
@@ -36,8 +36,10 @@ class ScreenHomePage extends StatelessWidget {
                 },
                 child: Stack(
                   children: [
+                    
                     ListView(
                       children: [
+                        
                         section1_banner_show_Case_area(),
                         MainTitleCard(title: "Released in the past year"),
                         kheight,

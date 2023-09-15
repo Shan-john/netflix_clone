@@ -11,10 +11,11 @@ class Home_screen_dynamicappbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 1000), 
         height: 80,
         width: double.infinity,
-        
+        color: colorblack.withOpacity(0.3),
         child: Column(
 
           children: [
@@ -46,12 +47,9 @@ class Home_screen_dynamicappbar extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text("TV Show",style: TextStyle(fontSize: 
-                20,fontWeight: FontWeight.bold),),
-                Text("Movies",style: TextStyle(fontSize: 
-                20,fontWeight: FontWeight.bold),),
-                Text("Categories",style: TextStyle(fontSize: 
-                20,fontWeight: FontWeight.bold),),
+                Text("TV Show",style: homeappbartextstyle,),
+                Text("Movies",style: homeappbartextstyle,),
+                Text("Categories",style: homeappbartextstyle,),
               ],
             )
           ],
