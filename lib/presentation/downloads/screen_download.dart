@@ -52,9 +52,11 @@ class Section2 extends StatelessWidget {
   Section2({super.key});
 
   final imagelist = [
-    "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg",
-    "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jDjmnEuNUfWHg8rbW6u8mylkcO0.jpg",
-    "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/iOJX54nVAsnPawagFiWXKv1Y6sB.jpg",
+    "https://i.pinimg.com/564x/a8/b5/ed/a8b5edfd36352a035c6b7afe68b99009.jpg",
+    "https://i.pinimg.com/564x/a8/b5/ed/a8b5edfd36352a035c6b7afe68b99009.jpg",
+    "https://i.pinimg.com/564x/a8/b5/ed/a8b5edfd36352a035c6b7afe68b99009.jpg",
+  
+  
   ];
   @override
   Widget build(BuildContext context) {

@@ -43,7 +43,8 @@ class screenNewsAndHot extends StatelessWidget {
                         width: 250,
                         child: Center(
                             child: Text(
-                          "👀 Everyone's watching ",
+                              textAlign: TextAlign.start,
+                          "👀 Everyone's watching",
                           style: TextStyle(fontSize: 17),
                         )),
                       ),
@@ -87,7 +88,7 @@ _BuildComingSoon(BuildContext context) {
           Container(
            
             width: size.width - 60,
-            height: 500,
+            height:500,
             color: colorsblue,
             child: Column(
            crossAxisAlignment : CrossAxisAlignment.start, 
