@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:netflix_cone/core/colors/Colors.dart';
+import 'package:netflix_cone/core/constants.dart';
 
 class AppBarWideget extends StatelessWidget {
   final title;
@@ -21,17 +22,13 @@ class AppBarWideget extends StatelessWidget {
           size: 30,
           color: customgreycolors,
         ),
-        SizedBox(
-          width: 15,
-        ),
+       kwidth,
         Icon(
           Icons.emoji_emotions,
           size: 30,
           color: customgreycolors,
         ),
-        SizedBox(
-          width: 15,
-        )
+      kwidth
       ],
     );
   }
