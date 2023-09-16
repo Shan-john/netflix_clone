@@ -21,9 +21,9 @@ Stack section1_banner_show_Case_area() {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              _horizontal_Icon_Text_button(icon: Icons.add, text: "My List"),
+              horizontal_Icon_Text_button(icon: Icons.add, text: "My List"),
               _Playbutton(),
-              _horizontal_Icon_Text_button(
+              horizontal_Icon_Text_button(
                   icon: Icons.info_outline, text: "InFo"),
             ],
           ),
@@ -32,18 +32,18 @@ Stack section1_banner_show_Case_area() {
     );
   }
 
-  Column _horizontal_Icon_Text_button(
-      {required IconData icon, required String text}) {
+  Column horizontal_Icon_Text_button(
+      {required IconData icon, required String text ,double iconsize = 30,double fontsize =20}) {
     return Column(
       children: [
         Icon(
           icon,
           color: colorswhite,
-          size: 30,
+          size: iconsize,
         ),
         Text(
           text,
-          style: TextStyle(color: colorswhite, fontSize: 20),
+          style: TextStyle(color: colorswhite, fontSize: fontsize),
         )
       ],
     );

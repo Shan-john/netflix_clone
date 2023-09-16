@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix_cone/core/colors/Colors.dart';
 import 'package:netflix_cone/core/constants.dart';
+import 'package:netflix_cone/presentation/New_and_hots/widgets/coming_soon_Widget.dart';
+import 'package:netflix_cone/presentation/New_and_hots/widgets/everyones_Watching_widget.dart';
 import 'package:netflix_cone/presentation/Widgets/app_bar_Widget.dart';
+import 'package:netflix_cone/presentation/home/widget/banner_show_case_area_section1.dart';
 
-class screenNewsAndHot extends StatelessWidget {
-  const screenNewsAndHot({super.key});
+class ScreenNewsAndHot extends StatelessWidget {
+  const ScreenNewsAndHot({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class screenNewsAndHot extends StatelessWidget {
                     Tab(
                       child: Container(
                         width: 250,
-                        child: Center(
+                        child: const Center(
                             child: Text(
                           "🍿 Coming soon",
                           style: TextStyle(
@@ -43,7 +45,7 @@ class screenNewsAndHot extends StatelessWidget {
                         width: 250,
                         child: Center(
                             child: Text(
-                              textAlign: TextAlign.start,
+                          textAlign: TextAlign.start,
                           "👀 Everyone's watching",
                           style: TextStyle(fontSize: 17),
                         )),
@@ -54,7 +56,7 @@ class screenNewsAndHot extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              _BuildComingSoon(context),
+              _BuildComingSoon(),
               _BuildEveryonswatching(),
             ],
           )),
@@ -62,57 +64,20 @@ class screenNewsAndHot extends StatelessWidget {
   }
 }
 
-_BuildComingSoon(BuildContext context) {
-  final size = MediaQuery.of(context).size;
-  return ListView(
-    children: [
-      kheight20,
-      Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            width: 60,
-            child: Column(
-              children: [
-                Text(
-                  "Feb",
-                  style: kTextStyle,
-                ),
-                Text(
-                  "18",
-                  style: kTextStyle.copyWith(fontWeight: FontWeight.normal,fontSize: 16),
-                ),
-              ],
-            ),
-          ),
-          Container(
-           
-            width: size.width - 60,
-            height:500,
-            color: colorsblue,
-            child: Column(
-           crossAxisAlignment : CrossAxisAlignment.start, 
-              children: [
-              const  SizedBox(
-                  width: double.infinity,
-                  height: 250,
-                  child: Image(
-                    fit: BoxFit.cover,
-                    image: NetworkImage(dumpurl)),
-                ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text("Movie Name",style: GoogleFonts.alkatra(fontSize: 60),),
-                  )
-              ],
-            ),
-          ),
-        ],
-      ),
-    ],
+_BuildComingSoon() {
+  return ListView.builder(
+    shrinkWrap: true,
+    itemCount: 10,
+    itemBuilder: (context, index) {
+      return Coming_Soon_Widget();
+    },
   );
 }
 
 _BuildEveryonswatching() {
-  return kheight;
+  return ListView.builder(
+    itemCount: 3,
+    itemBuilder: (context, index) {
+    return EveryonesWatchingWidget();
+  });
 }

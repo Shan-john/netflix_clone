@@ -12,6 +12,7 @@ class AppBarWideget extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.black,
+  
       title: Text(
         title,
         style: TextStyle(
